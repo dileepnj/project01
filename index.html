@@ -1,68 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Automotive Workshop Hero Section</title>
-  <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-  <!-- Custom CSS for specific styles -->
-  <style>
-    .hero-section {
-      background-image: url('https://source.unsplash.com/1600x900/?car,workshop');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      position: relative;
-    }
-    .overlay {
-      background-color: black;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-    }
-    .content h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .content p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .btn:hover {
-      background-color: #0069d9;
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Precision AutoCare</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animate On Scroll CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://cdn.pixabay.com/photo/2024/04/22/14/14/ai-generated-8712724_1280.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .overlay {
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+    </style>
 </head>
 <body>
-  <section class="hero-section">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Precision AutoCare</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
     <div class="overlay"></div>
     <div class="content">
-      <h1>Your Automotive Workshop</h1>
-      <p>Expert Repairs and Maintenance</p>
-      <a href="#" class="btn">Book a Service</a>
+      
+        <h1 class="text-4xl sm:text-5xl font-bold text-white" 
+        data-aos="fade-up"
+        onmouseover="this.style.color='#ffcc00'; this.style.textShadow='1px 1px 2px #000';"
+        onmouseout="this.style.color='white'; this.style.textShadow='none';">
+        Welcome to Precision AutoCare
+        </h1>    
+        <p class="mt-4 text-lg sm:text-xl text-gray-300" data-aos="fade-up">Your Trusted Auto Repair Specialists</p>
+        <p class="mt-2 text-base text-gray-400" data-aos="fade-up">Trusted by drivers in Springfield since 2010</p>
+        <a href="#" class="btn btn-primary mt-8 px-8 py-3 font-semibold" data-aos="fade-up">Schedule Your Service</a>
     </div>
-  </section>
+   
+</section>
+
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
